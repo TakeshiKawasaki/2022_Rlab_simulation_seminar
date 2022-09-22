@@ -8,7 +8,7 @@
 using namespace std;
 //A Monte Carlo simulation
 int main(void){
-  int i, count = 0, max = 1e+7;
+  int i, count = 0, max = 1e+9;
   double x,y,z,pi;
   srand(time(NULL));
   for(i=0;i<max;i++){
@@ -18,7 +18,7 @@ int main(void){
     if(z<1)
       count++; }
   pi = (double)count / max * 4;
-  printf("%.20f¥n",pi);  // by C, %.20f    Display with 20 decimal precision                                                                           
+  printf("%.20f\n",pi);  // by C, %.20f    Display with 20 decimal precision                                                                           
   cout<< std::setprecision(21)  <<  pi  << endl; // by C++                                                     
   return 0;
 }
